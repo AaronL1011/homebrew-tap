@@ -5,13 +5,13 @@
 class SpecCli < Formula
   desc "Developer control plane CLI"
   homepage "https://github.com/aaronl1011/spec-cli"
-  version "0.1.4"
+  version "0.2.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/aaronl1011/spec-cli/releases/download/v0.1.4/spec-cli_0.1.4_darwin_amd64.tar.gz"
-      sha256 "104cc25f54eba72e839a61c919177e6feb64a9bca52e473db8270920454416c4"
+      url "https://github.com/aaronl1011/spec-cli/releases/download/v0.2.0/spec-cli_0.2.0_darwin_amd64.tar.gz"
+      sha256 "35b7e11be35725305891d3223c1ce370f1e381b50e2b22b7be7b2b25c4ddcb55"
 
       define_method(:install) do
         bin.install "spec"
@@ -19,8 +19,8 @@ class SpecCli < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/aaronl1011/spec-cli/releases/download/v0.1.4/spec-cli_0.1.4_darwin_arm64.tar.gz"
-      sha256 "199720c7d33c5379afca0834f4b2d97c3a1654503a709d2895367bd2dcf1e702"
+      url "https://github.com/aaronl1011/spec-cli/releases/download/v0.2.0/spec-cli_0.2.0_darwin_arm64.tar.gz"
+      sha256 "15b0dc139e454f4c5774521d1d25aff7b84077bdb353a06b88aba3cf77990c21"
 
       define_method(:install) do
         bin.install "spec"
@@ -31,16 +31,16 @@ class SpecCli < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/aaronl1011/spec-cli/releases/download/v0.1.4/spec-cli_0.1.4_linux_amd64.tar.gz"
-      sha256 "5803fc3ad59f5ed0eca724c3da77c80b096a14317f030d0e0830c58ae0e1e1f8"
+      url "https://github.com/aaronl1011/spec-cli/releases/download/v0.2.0/spec-cli_0.2.0_linux_amd64.tar.gz"
+      sha256 "ea1e53915d41f2482e9c00f709f892ac9099748b570d96cd9fb8395b5eddfd33"
       define_method(:install) do
         bin.install "spec"
         man1.install Dir["docs/man/*.1"] if Dir.exist?("docs/man")
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/aaronl1011/spec-cli/releases/download/v0.1.4/spec-cli_0.1.4_linux_arm64.tar.gz"
-      sha256 "ceb794d29018c819cc7e4eba53f4b54854658f3c0d553386c716b2e2f2698ef9"
+      url "https://github.com/aaronl1011/spec-cli/releases/download/v0.2.0/spec-cli_0.2.0_linux_arm64.tar.gz"
+      sha256 "0173ad1ba5998f89ece10968f6e8c5a3ee6eb7ed8b01bf746995e3fc6f6dc5dc"
       define_method(:install) do
         bin.install "spec"
         man1.install Dir["docs/man/*.1"] if Dir.exist?("docs/man")
