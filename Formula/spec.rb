@@ -5,13 +5,13 @@
 class Spec < Formula
   desc "Developer control plane CLI"
   homepage "https://github.com/aaronl1011/spec"
-  version "0.41.1"
+  version "0.42.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/aaronl1011/spec/releases/download/v0.41.1/spec_0.41.1_darwin_amd64.tar.gz"
-      sha256 "676e228fdd56e87f3453f2fab7ec8e6191161cbf899e4d8987ca4c592f659840"
+      url "https://github.com/aaronl1011/spec/releases/download/v0.42.0/spec_0.42.0_darwin_amd64.tar.gz"
+      sha256 "61c6ded6e5dc37f039e4f9224fba8b2789dfff0a9737093c63ac7eb54b3e04a9"
 
       define_method(:install) do
         bin.install "spec"
@@ -19,8 +19,8 @@ class Spec < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/aaronl1011/spec/releases/download/v0.41.1/spec_0.41.1_darwin_arm64.tar.gz"
-      sha256 "283cbe927f2045ee40f06cb8de80932a108edd62e6a3047fc349204a47630c38"
+      url "https://github.com/aaronl1011/spec/releases/download/v0.42.0/spec_0.42.0_darwin_arm64.tar.gz"
+      sha256 "9cf2fa21c053832521c50b0ccc0fe7b09f2bdb3a44abdd0d8b4faf12e9aa9ced"
 
       define_method(:install) do
         bin.install "spec"
@@ -31,16 +31,16 @@ class Spec < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/aaronl1011/spec/releases/download/v0.41.1/spec_0.41.1_linux_amd64.tar.gz"
-      sha256 "bffd6c0bf4d06565613b37d021f9e6202320f3f73c53ad848769ddd9d92760da"
+      url "https://github.com/aaronl1011/spec/releases/download/v0.42.0/spec_0.42.0_linux_amd64.tar.gz"
+      sha256 "8e898d28eb83f07b185e041e58d4e23993e73e54189c41def8454f003e84198e"
       define_method(:install) do
         bin.install "spec"
         man1.install Dir["docs/man/*.1"] if Dir.exist?("docs/man")
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/aaronl1011/spec/releases/download/v0.41.1/spec_0.41.1_linux_arm64.tar.gz"
-      sha256 "11dcea9a3b6801235007f6283ec8af1db3897a57c0cb0c68857dcdf43a00671f"
+      url "https://github.com/aaronl1011/spec/releases/download/v0.42.0/spec_0.42.0_linux_arm64.tar.gz"
+      sha256 "8e9f9b0fe13825868d0952dca01b51c8fc6ef01bfba26999fd4db5a2e4f62f26"
       define_method(:install) do
         bin.install "spec"
         man1.install Dir["docs/man/*.1"] if Dir.exist?("docs/man")
